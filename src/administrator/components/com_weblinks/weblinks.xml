@@ -17,6 +17,8 @@
 			<file charset="utf8" driver="mysql">sql/install.mysql.sql</file>
 			<file charset="utf8" driver="postgresql">sql/install.postgresql.sql</file>
 			<file charset="utf8" driver="sqlsrv">sql/install.sqlsrv.sql</file>
+			<file cmsversion="4" charset="utf8" driver="mysql">sql/j4/install.mysql.sql</file>
+			<file cmsversion="4" charset="utf8" driver="postgresql">sql/j4/install.postgresql.sql</file>
 		</sql>
 	</install>
 	<uninstall>
@@ -26,11 +28,19 @@
 			<file charset="utf8" driver="sqlsrv">sql/uninstall.sqlsrv.sql</file>
 		</sql>
 	</uninstall>
+	<upgrade>
+		<sql>
+			<file cmsversion="4" charset="utf8" driver="mysql">sql/j4/upgrade.mysql.sql</file>
+			<file cmsversion="4" charset="utf8" driver="postgresql">sql/j4/upgrade.postgresql.sql</file>
+		</sql>
+	</upgrade>
 	<update>
 		<schemas>
 			<schemapath type="mysql">sql/updates/mysql</schemapath>
 			<schemapath type="postgresql">sql/updates/postgresql</schemapath>
 			<schemapath type="sqlsrv">sql/updates/sqlsrv</schemapath>
+			<schemapath cmsversion="4" type="mysql">sql/j4/updates/mysql</schemapath>
+			<schemapath cmsversion="4" type="postgresql">sql/j4/updates/postgresql</schemapath>
 		</schemas>
 	</update>
 
